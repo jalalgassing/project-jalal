@@ -40,8 +40,8 @@ const Sidebar = () => {
 
   return <div className="bg-white w-[300px] min-h-screen p-4 shrink-0">
   <div className="flex items-center gap-4">
-    <img className= "size-12 rounded-lg" src="/public/logo.jpeg" alt="logo" />
-    <h2 className="text-[20px] font-semibold">The Brave Coders</h2>
+    <img className= "size-12 rounded-lg" src="C:\project-jalal\public\logo.jpg" alt="logo" />
+    <h2 className="text-[20px] font-semibold font-mono">Latom Store</h2>
   </div>
 
   <ul className="space-y-4 mt-6">
