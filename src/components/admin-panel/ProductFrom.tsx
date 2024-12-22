@@ -47,7 +47,7 @@ const ProductFrom = () => {
   return <form className="flex flex-col gap-4" onSubmit={handleSumbit}>
     <Image 
         className="max-h-[300px] w-auto object-contain rounded-md"
-        src={payLoad.imgScr ? payLoad.imgScr : "/placeholder.jpg"}
+        src={payLoad.imgScr ? payLoad.imgScr : "/placeholder.png"}
         width={800}
         height={500}
         alt="product_image"

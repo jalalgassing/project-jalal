@@ -1,8 +1,15 @@
-import Image from "next/image";
+"use client"
+import Navbar from "@/components/front-end/Navbar";
+import React, { useState } from "react";
 
-export default function Home() {
+const Home = () => {
+  const [showCart, setShowCart] = useState(false);
+
   return (
-      <main>halo</main>
-      
+    <main>
+      <Navbar setShowCart={setShowCart} />
+    </main>
   );
-}
+};
+
+export default Home;
