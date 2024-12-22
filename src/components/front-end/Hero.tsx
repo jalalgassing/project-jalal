@@ -12,7 +12,7 @@ const Hero = () => {
                             The best T-Shirt branding in 2024
                         </h1>
                         <h3 className="text-2xl font-['Oregano, cursive']">
-                            Exclusive Offer <span className="text-red-600">-10%</span>of this week
+                            Exclusive Offer <span className="text-red-600">-1%</span>of this week
                         </h3>
 
                         <a 
