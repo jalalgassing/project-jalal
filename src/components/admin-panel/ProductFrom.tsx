@@ -24,14 +24,15 @@ const ProductFrom = () => {
         price: ""
     })
 
-    const dispatch = useAppDispatch ()
+    const dispatch = useAppDispatch ();
 
     const handleSumbit = (e: FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        dispatch(setLoading(true))
+        dispatch(setLoading(true));
 
-        axios.post("/api/add_product", payLoad).then(res => {
+        axios.post("/api/add_product", payLoad).then((res => {
+            console.log(res);
             makeToast("Product added Successfully")
             setpayLoad({
                 imgScr: null, 
@@ -40,18 +41,19 @@ const ProductFrom = () => {
                 category: "",
                 price: ""
             })
-        }).catch(err => console.log(err)
+        })).catch(err => console.log(err)
         ).finally(() => dispatch(setLoading(false)));
     };
 
-  return <form className="flex flex-col gap-4" onSubmit={handleSumbit}>
-    <Image 
-        className="max-h-[300px] w-auto object-contain rounded-md"
-        src={payLoad.imgScr ? payLoad.imgScr : "/placeholder.png"}
-        width={800}
-        height={500}
-        alt="product_image"
-    />
+  return (
+    <form className="flex flex-col gap-4" onSubmit={handleSumbit}>
+        <Image 
+            className="max-h-[300px] w-auto object-contain rounded-md"
+            src={payLoad.imgScr ? payLoad.imgScr : "/placeholder.png"}
+            width={800}
+            height={500}
+            alt="product_image"
+        />
 
     <UploadButton 
         endpoint="imageUploader"
@@ -71,7 +73,7 @@ const ProductFrom = () => {
         }}
         />
     <div>
-        <label className="block ml-1">Nama produk</label>
+        <label className="block ml-1">Product Name</label>
         <input 
             className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
             type="text"
@@ -81,7 +83,7 @@ const ProductFrom = () => {
         />
     </div>
     <div>
-        <label className="block ml-1">Kategori produk</label>
+        <label className="block ml-1">Product Category</label>
         <input 
             className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
             type="text"
@@ -91,7 +93,7 @@ const ProductFrom = () => {
         />
     </div>
     <div>
-        <label className="block ml-1">Harga produk</label>
+        <label className="block ml-1">Product Price</label>
         <input 
             className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
             type="text"
@@ -102,11 +104,11 @@ const ProductFrom = () => {
     </div>
 
     <div className="flex justify-end">
-        <button className="bg-pink text-white px-8 py-2 rounded-md">ADD</button>
+        <button className="bg-pink text-white px-8 py-2 rounded-md">Add</button>
     </div>
 
     </form>
-  
+  );
 };
 
 export default ProductFrom;
