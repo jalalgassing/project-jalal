@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { setLoading } from "@/redux/features/loadingSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import { makeToast } from "@/utils/helper";
@@ -21,7 +21,7 @@ const ProductFrom = () => {
         fileKey: null, 
         name: "",
         category: "",
-        price: ""
+        price: "",
     })
 
     const dispatch = useAppDispatch ();
@@ -31,18 +31,19 @@ const ProductFrom = () => {
 
         dispatch(setLoading(true));
 
-        axios.post("/api/add_product", payLoad).then((res => {
+        axios.post("/api/add_product", payLoad).then((res) => {
             console.log(res);
-            makeToast("Product added Successfully")
+            makeToast("Product added Successfully");
             setpayLoad({
                 imgScr: null, 
                 fileKey: null, 
                 name: "",
                 category: "",
-                price: ""
-            })
-        })).catch(err => console.log(err)
-        ).finally(() => dispatch(setLoading(false)));
+                price: "",
+            });
+        })
+        .catch((err) => console.log(err))
+        .finally(() => dispatch(setLoading(false)));
     };
 
   return (
@@ -71,7 +72,7 @@ const ProductFrom = () => {
             // DO something with error
         console.log(`ERROR! ${error}`);
         }}
-        />
+    />
     <div>
         <label className="block ml-1">Product Name</label>
         <input 

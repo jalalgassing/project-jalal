@@ -3,12 +3,12 @@ import React from "react";
 
 const products = () => {
   return (
-    <div className="h-[calc(100vh-96px)] w-full grid place-items-center overflow-y-auto p-4">
-        <div className="bg-white w-[300px] rounded-lg">
+    <div className="h-[calc(100vh-96px)] w-full grid place-items-center overflow-y-auto">
+        <div className="bg-white w-[300px] rounded-lg p-4">
             <ProductFrom />
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default products
+export default products;

@@ -44,9 +44,9 @@ const Dashboard = () => {
             <thead>
               <tr className="text-gray-500 border-t border-[#ececec]">
                 <th>No.</th>
-                <th>Nama Barang</th>
-                <th>Harga</th>
-                <th>Gambar</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Picture</th>
                 <th>Actions</th>
               </tr>
             </thead>

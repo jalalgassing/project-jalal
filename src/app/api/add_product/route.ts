@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
             fileKey, 
             name, 
             category, 
-            price
+            price,
         });
 
         return NextResponse.json({msg: "Product added successfully", data});

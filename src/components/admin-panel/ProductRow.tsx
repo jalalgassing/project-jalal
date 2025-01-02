@@ -32,7 +32,7 @@ const onDelete = () => {
         fileKey: product.fileKey
     }
 
-    axios.delete("/api/uploadthing", {data: payLoad}).then(res => {
+    axios.delete(`/api/uploadthing`, {data: payLoad}).then(res => {
         console.log(res.data);
 
         axios.delete(`/api/delete_products/${product._id}`).then(res => {
@@ -69,4 +69,4 @@ const onDelete = () => {
     </tr>
 };
 
-export default ProductRow
+export default ProductRow;

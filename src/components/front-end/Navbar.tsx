@@ -13,7 +13,7 @@ const cartCount = useAppSelector((state) => state.cartReducer.length)
   return <div className="pt-4 bg-white top-0 sticky">
     <div className="container">
         <div className="flex justify-between items-center">
-            <div className="text-4xl font-bold">Logo</div>
+            <div className="text-4xl font-bold font-mono">Latom Store</div>
                 <div className="lg:flex hidden w-full max-w-[500px]">
                     <input className="border-2 border-accent px-6 py-2 w-full" 
                         type="text" 
