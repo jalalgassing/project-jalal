@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Popup from '@/components/admin-panel/Popup';
 import ProductRow from '@/components/admin-panel/ProductRow';
 import { setLoading } from '@/redux/features/loadingSlice';
@@ -58,7 +58,7 @@ const Dashboard = () => {
                 setOpenPopup={setOpenPopup}
                 setUpdateTable={setUpdateTable}
                 product={product}
-                />
+              />
             ))}
           </tbody>
           </table>

@@ -1,4 +1,4 @@
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
 
 export const makeToast = (text: string) => {
     toast.success(text, {

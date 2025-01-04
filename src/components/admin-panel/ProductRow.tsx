@@ -32,7 +32,7 @@ const onDelete = () => {
         fileKey: product.fileKey
     }
 
-    axios.delete(`/api/uploadthing`, {data: payLoad}).then(res => {
+    axios.delete("/api/uploadthing", {data: payLoad}).then(res => {
         console.log(res.data);
 
         axios.delete(`/api/delete_products/${product._id}`).then(res => {
@@ -61,9 +61,13 @@ const onDelete = () => {
         <td>
             <div className="text-2xl flex items-center gap-2 text-gray-600">
                 <CiEdit 
-                className="cursor-pointer hover:text-black onClick={onEdit}"/>
+                    className="cursor-pointer hover:text-black"
+                    onClick={onEdit}
+                />
                 <RiDeleteBin5Line 
-                className="text-[20px] cursor-pointer hover:text-red-600 onClick={onDelete}"/>
+                    className="text-[20px] cursor-pointer hover:text-red-600"
+                    onClick={onDelete}
+                />
             </div>
         </td>
     </tr>

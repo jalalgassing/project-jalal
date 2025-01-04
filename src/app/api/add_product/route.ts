@@ -18,12 +18,12 @@ export async function POST(request: NextRequest) {
         });
 
         return NextResponse.json({msg: "Product added successfully", data});
-    } catch (error) {
-        return NextResponse.json({
-            error,
-            msg: "Something Went Wrong",
-        }, 
-        {status: 400}
-        );
-    }
+    }   catch (error) {
+            return NextResponse.json({
+                error,
+                msg: "Something Went Wrong",
+            }, 
+                {status: 400}
+            );
+        }
 }
