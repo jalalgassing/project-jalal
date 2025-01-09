@@ -5,12 +5,12 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
     try{
         const body = await request.json();
-        const {imgScr, fileKey, name, category, price} = body;
+        const {imgSrc, fileKey, name, category, price} = body;
 
         await connectMongoDB();
 
         const data = await Product.create({
-            imgScr, 
+            imgSrc, 
             fileKey, 
             name, 
             category, 

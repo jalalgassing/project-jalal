@@ -8,7 +8,7 @@ import Image from "next/image";
 import React, { FormEvent, useState } from "react";
 
 interface IPayload {
-    imgScr: null | string;
+    imgSrc: null | string;
     fileKey: null | string;
     name: string;
     category: string;
@@ -17,7 +17,7 @@ interface IPayload {
 const ProductFrom = () => {
 
     const [payLoad, setpayLoad] = useState<IPayload>({
-        imgScr: null, 
+        imgSrc: null, 
         fileKey: null, 
         name: "",
         category: "",
@@ -36,7 +36,7 @@ const ProductFrom = () => {
                 console.log(res);
                 makeToast("Product added Successfully");
                 setpayLoad({
-                    imgScr: null, 
+                    imgSrc: null, 
                     fileKey: null, 
                     name: "",
                     category: "",
@@ -51,7 +51,7 @@ const ProductFrom = () => {
     <form className="flex flex-col gap-4" onSubmit={handleSumbit}>
         <Image 
             className="max-h-[300px] w-auto object-contain rounded-md"
-            src={payLoad.imgScr ? payLoad.imgScr : "/placeholder.png"}
+            src={payLoad.imgSrc ? payLoad.imgSrc : "/placeholder.png"}
             width={800}
             height={500}
             alt="product_image"
@@ -64,7 +64,7 @@ const ProductFrom = () => {
                 console.log(res);
                 setpayLoad({
                     ...payLoad,
-                    imgScr: res[0]?.url,
+                    imgSrc: res[0]?.url,
                     fileKey: res[0]?.key,
                 });
         

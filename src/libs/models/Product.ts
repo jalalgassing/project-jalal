@@ -1,7 +1,7 @@
 import { model, models, Schema } from "mongoose";
 
 const productSchema = new Schema({
-    imgScr: {
+    imgSrc: {
         type: String,
         require: true,
     },

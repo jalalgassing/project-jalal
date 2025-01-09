@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 
 interface IProduct {
     _id: string;
-    imgScr: string;
+    imgSrc: string;
     fileKey: string;
     name: string;
     category: string;
@@ -42,7 +42,7 @@ const TrendingProducts = () => {
                 <ProductCard 
                     key={item._id}
                     id={item._id}
-                    img={item.imgScr}
+                    img={item.imgSrc}
                     category={item.category}
                     title={item.name}
                     price={item.price}

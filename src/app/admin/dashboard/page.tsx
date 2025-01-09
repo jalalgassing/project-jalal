@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 
 export interface IProduct {
   _id: string;
-  imgScr: string;
+  imgSrc: string;
   fileKey: string;
   name: string;
   price: string;
@@ -43,7 +43,7 @@ const Dashboard = () => {
           <table className="w-full">
             <thead>
               <tr className="text-gray-500 border-t border-[#ececec]">
-                <th>No.</th>
+                <th>srNo.</th>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Picture</th>

@@ -56,7 +56,7 @@ const onDelete = () => {
         </td>
         <td>$ {product.price}</td>
         <td className="py-2">
-            <Image src={product.imgScr} width={40} height={40} alt="product_image" />
+            <Image src={product.imgSrc} width={40} height={40} alt="product_image" />
         </td>
         <td>
             <div className="text-2xl flex items-center gap-2 text-gray-600">
