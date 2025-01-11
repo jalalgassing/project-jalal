@@ -17,11 +17,11 @@ export const cartSlice = createSlice({
         addToCart: (state, action: PayloadAction<IProduct>) => {
             if (state.findIndex((pro) => pro.id === action.payload.id) === -1){
                 state.push(action.payload);
-            }else {
+            } else {
                 return state.map((item) => {
                     return item.id === action.payload.id
                      ? {...item, quantity: item.quantity + 1} 
-                     :item;
+                     : item;
                 });
             }
         },
@@ -33,5 +33,5 @@ export const cartSlice = createSlice({
     },
 });
 
-export const {addToCart, removeFromCart} = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;
 export default cartSlice.reducer;

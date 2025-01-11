@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Louder = () => {
+const Loader = () => {
   return (
     <div className="fixed w-full h-screen top-0 left-0 bg-[#0000006d] grid place-items-center">
         <span className="loader"></span>
@@ -8,4 +8,4 @@ const Louder = () => {
   );
 };
 
-export default Louder;
+export default Loader;

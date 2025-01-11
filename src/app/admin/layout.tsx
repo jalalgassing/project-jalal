@@ -1,14 +1,14 @@
 "use client";
 import Login from "@/components/admin-panel/Login";
-import Louder from "@/components/admin-panel/Louder";
-import Sidebar from "@/components/admin-panel/sidebar";
+import Louder from "@/components/admin-panel/Loader";
+import Sidebar from "@/components/admin-panel/Sidebar";
 import { useAppSelector } from "@/redux/hooks";
 import { useSession } from "next-auth/react";
 import React from 'react'
 
-const layout = ({children}: {children: React.ReactNode}) => {
+const Layout = ({children}: {children: React.ReactNode}) => {
     const isLoading = useAppSelector((store) => store.LoadingReducer);
-    const {data: session} = useSession();
+    const { data: session } = useSession();
 
     if (!session?.user) {
         return <Login />;
@@ -25,4 +25,4 @@ const layout = ({children}: {children: React.ReactNode}) => {
   
 };
 
-export default layout;
+export default Layout;

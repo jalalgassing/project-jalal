@@ -26,13 +26,13 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(setLoading(true));
 
-  axios
-    .get("/api/get_products")
-    .then((res) => setProducts(res.data))
-    .catch(err => console.log(err))
-    .finally(() => dispatch(setLoading(false)));
+    axios
+      .get("/api/get_products")
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.log(err))
+      .finally(() => dispatch(setLoading(false)));
 
-  },[updateTable]);
+  },  [updateTable]);
 
   return(
     <div>
@@ -51,22 +51,22 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-            {products.map((product: IProduct, index) => (
-              <ProductRow 
-                key={product._id}
-                srNo={index + 1}
-                setOpenPopup={setOpenPopup}
-                setUpdateTable={setUpdateTable}
-                product={product}
-              />
-            ))}
-          </tbody>
+              {products.map((product: IProduct, index) => (
+                <ProductRow 
+                  key={product._id}
+                  srNo={index + 1}
+                  setOpenPopup={setOpenPopup}
+                  setUpdateTable={setUpdateTable}
+                  product={product}
+                />
+              ))}
+            </tbody>
           </table>
         </div>
       </div>
 
       {openPopup && (
-          <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />
+        <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />
       )}
     </div>
   );  

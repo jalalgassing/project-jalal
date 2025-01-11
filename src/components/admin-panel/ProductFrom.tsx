@@ -32,7 +32,8 @@ const ProductFrom = () => {
         dispatch(setLoading(true));
 
         axios
-            .post("/api/add_product", payLoad).then((res) => {
+            .post("/api/add_product", payLoad)
+            .then((res) => {
                 console.log(res);
                 makeToast("Product added Successfully");
                 setpayLoad({
@@ -62,6 +63,7 @@ const ProductFrom = () => {
             onClientUploadComplete={(res) => {
                 // Do something with the response
                 console.log(res);
+                
                 setpayLoad({
                     ...payLoad,
                     imgSrc: res[0]?.url,

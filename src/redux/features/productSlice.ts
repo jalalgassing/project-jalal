@@ -8,17 +8,17 @@ const initialState: IProduct = {
     name: "",
     price: "",
     category: "",
-}
+};
 
 export const productSlice = createSlice({
     name: "productSlice",
     initialState,
     reducers: {
         setProduct: (state, action: PayloadAction<IProduct>) => {
-            return action.payload
-        }
-    }
-})
+            return action.payload;
+        },
+    },
+});
 
-export const {setProduct} = productSlice.actions
-export default productSlice.reducer
+export const { setProduct } = productSlice.actions;
+export default productSlice.reducer;
