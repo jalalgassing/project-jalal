@@ -77,9 +77,9 @@ const ProductFrom = () => {
              }}
         />
         <div>
-            <label className="block ml-1">Product Name</label>
+            <label className="block ml-1">Nama Produk</label>
             <input 
-                className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+                className="bg-gray-300 w-full px-4 py-2 border outline-blue-600 rounded-md"
                 type="text"
                 value={payLoad.name}
                 onChange={(e) => setpayLoad({...payLoad, name: e.target.value})}
@@ -87,9 +87,9 @@ const ProductFrom = () => {
             />
         </div>
         <div>
-            <label className="block ml-1">Product Category</label>
+            <label className="block ml-1">Kategori Produk</label>
             <input 
-                className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+                className="bg-gray-300 w-full px-4 py-2 border outline-blue-600 rounded-md"
                 type="text"
                 value={payLoad.category}
                 onChange={(e) => setpayLoad({...payLoad, category: e.target.value})}
@@ -97,9 +97,9 @@ const ProductFrom = () => {
             />
         </div>
         <div>
-            <label className="block ml-1">Product Price</label>
+            <label className="block ml-1">Harga</label>
             <input 
-                className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+                className="bg-gray-300 w-full px-4 py-2 border outline-blue-600 rounded-md"
                 type="text"
                 value={payLoad.price}
                 onChange={(e) => setpayLoad({...payLoad, price: e.target.value})}
@@ -108,7 +108,7 @@ const ProductFrom = () => {
         </div>
 
         <div className="flex justify-end">
-            <button className="bg-pink text-white px-8 py-2 rounded-md">Add</button>
+            <button className="bg-blue-600 text-white px-8 py-2 rounded-md">Tambah</button>
         </div>
 
     </form>

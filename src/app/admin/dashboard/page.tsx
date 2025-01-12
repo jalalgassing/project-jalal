@@ -36,18 +36,18 @@ const Dashboard = () => {
 
   return(
     <div>
-      <div className="bg-white h-[calc(100vh-96px)] rounded-lg p-4">
+      <div className="bg-gray-300 h-[calc(100vh-96px)] rounded-lg p-4">
         <h2 className="text-3xl">All Product</h2>
 
         <div className="mt-4 h-[calc(100vh-180px)] overflow-y-auto">
           <table className="w-full">
             <thead>
-              <tr className="text-gray-500 border-t border-[#ececec]">
-                <th>srNo.</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Picture</th>
-                <th>Actions</th>
+              <tr className="text-black border-t border-[#ececec]">
+                <th>No</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Gambar</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
